@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy · FaiSH</title>
+  <meta name="description" content="What information FaiSH handles, where it goes, and what is done with it.">
+  <meta name="theme-color" content="#0A0614">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="stylesheet" href="../site.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <a class="wm" href="../" aria-label="FaiSH, home">F<span class="ai">ai</span>SH</a>
+      <nav aria-label="Site">
+        <a href="../support/">Support</a>
+        <a href="./" aria-current="page">Privacy</a>
+      </nav>
+    </header>
+
+    <main class="doc">
+      <h1>Privacy</h1>
+      <p class="updated">Last updated 27 October 2026.</p>
+      <div class="scale" aria-hidden="true"></div>
+      <div class="prose">
+        <p>FaiSH is made by MasterMined Innovation Pty Ltd (ABN 98 673 501 436), called &ldquo;we&rdquo; on this page. This page says what information FaiSH handles, where it goes, and what we do with it. It covers the FaiSH web app at faish.expo.app, this website, and the FaiSH phone apps when they are released.</p>
+
+        <h2>In short</h2>
+        <ul>
+          <li>FaiSH has no accounts. You do not sign in, and we hold nothing on a server that identifies you.</li>
+          <li>What you enter (your boat, your ramps, your settings, your saved trips) stays on your device.</li>
+          <li>FaiSH has no advertising, no analytics and no tracking. We do not sell or share information about you.</li>
+        </ul>
+
+        <h2>What stays on your device</h2>
+        <p>FaiSH keeps the following on your device only: in your browser's storage for the web app, or in the app's own storage on a phone.</p>
+        <ul>
+          <li>your boats and their limits;</li>
+          <li>the ramps you choose, and the ones you have used recently;</li>
+          <li>your settings, including where you start from and the drive time you enter;</li>
+          <li>the trips you save;</li>
+          <li>the version of the terms you accepted, and when;</li>
+          <li>copies of the forecasts, warnings and tides last downloaded, so the app works without a signal.</li>
+        </ul>
+        <p>To delete all of it, clear FaiSH's data in your browser's settings, or delete the app. Nothing else needs deleting, because none of it is held anywhere else.</p>
+
+        <h2>Your location</h2>
+        <p>FaiSH reads your location only when you tap Nearest to me while choosing a ramp. It reads it once, uses it on your device to sort the ramps by distance, and does not store it or send it anywhere. Your browser or phone asks your permission first.</p>
+
+        <h2>What leaves your device</h2>
+        <p>FaiSH needs forecasts, and getting them means asking servers for them. This is what is sent, to whom, and why.</p>
+        <ul>
+          <li><strong>Forecast files.</strong> The app downloads a forecast file for your region from FaiSH's forecast server (Microsoft Azure, in Australia). The file is the same for everyone in the region, so asking for it does not say which ramp you use.</li>
+          <li><strong>Forecasts the file does not cover.</strong> If your ramp's water is not in the region's file, or the file cannot be downloaded, the app asks Open-Meteo, the forecast provider, for the forecast at that point on its grid. Grid cells are about 13 km across. Open-Meteo learns roughly which water you are looking at, not who you are.</li>
+          <li><strong>Warnings and tides.</strong> The app downloads the Bureau of Meteorology's marine warnings, and the tide predictions for your region, from FaiSH's app server. These are also the same for everyone in a region.</li>
+          <li><strong>The written reading of the day.</strong> To write its plain-language reading, the app sends FaiSH's app server the day's forecast figures, the date, the region, the kind of trip, and which fish list applies. It sends no location, no name and nothing you have typed. The server passes those figures to Anthropic's Claude model, which writes the reading.</li>
+          <li><strong>Feedback.</strong> A feedback link in the app opens your own email program with a message to feedback@faish.app. The message includes the ramp's name and the app's version, and you see it before you send it. We keep feedback to read it and act on it, and delete it on request.</li>
+        </ul>
+        <p>Like every website, the servers that deliver FaiSH see your device's internet (IP) address and the time of each request. FaiSH's app server uses the address only to limit how often one address can ask for the same file. It is held in the server's memory and is not written to storage. The hosting providers keep their own short-term logs under their own policies.</p>
+
+        <h2>Who else is involved</h2>
+        <ul>
+          <li><strong>Expo</strong> (EAS Hosting, which runs on Cloudflare) delivers the web app and runs its app server.</li>
+          <li><strong>Microsoft Azure</strong> runs FaiSH's forecast server and stores the forecast, warning and tide files.</li>
+          <li><strong>Open-Meteo</strong> provides weather and wave forecasts.</li>
+          <li><strong>Anthropic</strong> provides the model that writes the reading.</li>
+          <li><strong>Microsoft 365</strong> holds FaiSH's email.</li>
+        </ul>
+        <p>Some of these handle requests outside Australia, including in the United States and Europe.</p>
+
+        <h2>What FaiSH does not do</h2>
+        <ul>
+          <li>No accounts or sign-in.</li>
+          <li>No advertising, and no advertising or tracking code.</li>
+          <li>No analytics or crash-reporting code.</li>
+          <li>No access to your contacts, photos, camera or microphone.</li>
+          <li>No sale or sharing of information about you.</li>
+        </ul>
+
+        <h2>Coming with the Watch</h2>
+        <p>FaiSH plans a safety timer, the Watch, that sends a text message to people you nominate if you are overdue back. To work, it will need your mobile number, the names and numbers of the people you nominate, and your position while a Watch is running. None of this is collected today. This page will be updated, and the app will tell you, before the Watch is offered.</p>
+
+        <h2>Children</h2>
+        <p>FaiSH is made for the people who run boats. It is not directed at children.</p>
+
+        <h2>Questions and complaints</h2>
+        <p>Email <a href="mailto:privacy@faish.app">privacy@faish.app</a> to ask what FaiSH holds about you, to correct or delete anything, or to complain. If you are not satisfied with the answer, you can contact the Office of the Australian Information Commissioner at <a href="https://www.oaic.gov.au/">oaic.gov.au</a>.</p>
+
+        <h2>Changes</h2>
+        <p>When this page changes, the date at the top changes. A change to what FaiSH collects will be shown in the app before it takes effect.</p>
+      </div>
+    </main>
+
+    <footer>
+      <nav aria-label="Footer">
+        <a href="../">Home</a>
+        <a href="../support/">Support</a>
+        <a href="mailto:hello@faish.app">hello@faish.app</a>
+      </nav>
+      <p>&copy; 2026 MasterMined Innovation Pty Ltd, ABN 98 673 501 436. FaiSH is a trade mark of MasterMined Innovation Pty Ltd.</p>
+    </footer>
+  </div>
+</body>
+</html>

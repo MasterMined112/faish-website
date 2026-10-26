@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FaiSH</title>
+  <meta name="description" content="Marine trip planning for Australian waters: tomorrow graded against your boat, the hour to be off the water, the Bureau's warnings and tides, and what is worth chasing.">
+  <meta name="theme-color" content="#0A0614">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="preload" href="fonts/ArchivoExpanded-ExtraBold.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="fonts/Archivo-Regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <a class="wm" href="./" aria-label="FaiSH, home">F<span class="ai">ai</span>SH</a>
+      <nav aria-label="Site">
+        <a href="support/">Support</a>
+        <a href="privacy/">Privacy</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="hero">
+        <!-- The Contour Arc: first light, in the app's sunrise (magenta sun, violet sky). -->
+        <svg class="arc" viewBox="14 42 112 58" aria-hidden="true" focusable="false">
+          <defs>
+            <radialGradient id="sky" cx="70" cy="96" r="56" gradientUnits="userSpaceOnUse">
+              <stop offset="0" stop-color="#FF3D9A"/>
+              <stop offset=".55" stop-color="#8B4DFF"/>
+              <stop offset="1" stop-color="#3B1E8F"/>
+            </radialGradient>
+          </defs>
+          <g fill="none" stroke="url(#sky)" stroke-linecap="round" opacity=".85">
+            <path d="M54,96 A16,16 0 0 1 86,96" stroke-width="9"/>
+            <path d="M42,96 A28,28 0 0 1 98,96" stroke-width="7"/>
+            <path d="M30,96 A40,40 0 0 1 110,96" stroke-width="5.5"/>
+            <path d="M18,96 A52,52 0 0 1 122,96" stroke-width="4"/>
+          </g>
+        </svg>
+        <h1>Tomorrow, graded against your boat.</h1>
+        <p class="lede">And the hour to be off the water.</p>
+        <div class="prose">
+          <p>FaiSH reads the forecast for the water off your ramp and grades each hour against the wind and sea limits you set for your boat. The limits tighten for the kind of trip: fishing, a family day, an island camp, a dive, skiing. The answer comes with the time to be off the water, and the time to set your alarm.</p>
+        </div>
+      </div>
+
+      <section aria-labelledby="same-screen">
+        <h2 id="same-screen">On the same screen</h2>
+        <div class="scale" aria-hidden="true"></div>
+        <ul class="facts">
+          <li><strong>The Bureau of Meteorology's marine wind warnings</strong>In the Bureau's own words, with the hours they close.</li>
+          <li><strong>The tide at the nearest Bureau station</strong>High and low water for the day, with the ramp register's own tide warnings beside them.</li>
+          <li><strong>Bite windows, and what is worth chasing</strong>From the sun and moon, and from the fisheries agencies' published seasons and closures for the water you launch into.</li>
+          <li><strong>Australian boat ramps</strong><span class="figure">566</span> of them from the state registers of Queensland, New South Wales, Victoria, South Australia and Western Australia.</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="not">
+        <h2 id="not">What it is not</h2>
+        <div class="scale" aria-hidden="true"></div>
+        <div class="prose">
+          <p>FaiSH is a planning aid. It is not the official forecast, it does not contact rescue services, and it is not a chart. The decision to go, and when to come home, stays with the skipper.</p>
+          <p class="emergency">In an emergency, call <strong>000</strong> or use VHF channel <strong>16</strong>.</p>
+        </div>
+      </section>
+
+      <section aria-labelledby="get">
+        <h2 id="get">Using FaiSH</h2>
+        <div class="scale" aria-hidden="true"></div>
+        <div class="prose">
+          <p>FaiSH runs in a phone's browser now. The iPhone app is in preparation.</p>
+          <p><a class="button" href="https://faish.expo.app">Open FaiSH</a></p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <nav aria-label="Footer">
+        <a href="support/">Support</a>
+        <a href="privacy/">Privacy</a>
+        <a href="mailto:hello@faish.app">hello@faish.app</a>
+      </nav>
+      <p>&copy; 2026 MasterMined Innovation Pty Ltd, ABN 98 673 501 436. FaiSH is a trade mark of MasterMined Innovation Pty Ltd.</p>
+    </footer>
+  </div>
+</body>
+</html>
