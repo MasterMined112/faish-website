@@ -23,15 +23,15 @@
 
     <main class="doc">
       <h1>Privacy</h1>
-      <p class="updated">Last updated 27 October 2026.</p>
+      <p class="updated">Last updated 30 October 2026.</p>
       <div class="scale" aria-hidden="true"></div>
       <div class="prose">
-        <p>FaiSH is made by MasterMined Innovation Pty Ltd (ABN 98 673 501 436), called &ldquo;we&rdquo; on this page. This page says what information FaiSH handles, where it goes, and what we do with it. It covers the FaiSH web app at faish.expo.app, this website, and the FaiSH phone apps when they are released.</p>
+        <p>FaiSH is made by MasterMined Innovation Pty Ltd (ABN 98 673 501 436), called &ldquo;we&rdquo; on this page. This page says what information FaiSH handles, where it goes, and what we do with it. It covers the FaiSH web app at faish.expo.app, this website, and the FaiSH iPhone app, which is in testing.</p>
 
         <h2>In short</h2>
         <ul>
-          <li>FaiSH has no accounts. You do not sign in, and we hold nothing on a server that identifies you.</li>
-          <li>What you enter (your boat, your ramps, your settings, your saved trips) stays on your device.</li>
+          <li>Planning a trip needs no account. What you enter (your boat, your ramps, your settings, your saved trips) stays on your device.</li>
+          <li>The Watch, the optional safety timer in the iPhone app, is the one part that keeps anything about you on a server: your mobile number, the people you name and your trips. It is described in full <a href="#watch">below</a>, and you can delete it all from the app.</li>
           <li>FaiSH has no advertising, no analytics and no tracking. We do not sell or share information about you.</li>
         </ul>
 
@@ -58,8 +58,33 @@
           <li><strong>Warnings and tides.</strong> The app downloads the Bureau of Meteorology's marine warnings, and the tide predictions for your region, from FaiSH's app server. These are also the same for everyone in a region.</li>
           <li><strong>The written reading of the day.</strong> To write its plain-language reading, the app sends FaiSH's app server the day's forecast figures, the date, the region, the kind of trip, and which fish list applies. It sends no location, no name and nothing you have typed. The server passes those figures to Anthropic's Claude model, which writes the reading.</li>
           <li><strong>Feedback.</strong> A feedback link in the app opens your own email program with a message to feedback@faish.app. The message includes the ramp's name and the app's version, and you see it before you send it. We keep feedback to read it and act on it, and delete it on request.</li>
+          <li><strong>The Watch</strong>, if you use it: see <a href="#watch">the Watch</a>.</li>
         </ul>
-        <p>Like every website, the servers that deliver FaiSH see your device's internet (IP) address and the time of each request. FaiSH's app server uses the address only to limit how often one address can ask for the same file. It is held in the server's memory and is not written to storage. The hosting providers keep their own short-term logs under their own policies.</p>
+        <p>Like every website, the servers that deliver FaiSH see your device's internet (IP) address and the time of each request. FaiSH's app server and the Watch's server use the address only to limit how often one address can ask. It is held in the server's memory and is not written to storage, and the Watch's server keeps no log of requests. The hosting providers keep their own short-term logs under their own policies.</p>
+
+        <h2 id="watch">The Watch</h2>
+        <p>The Watch is an optional safety timer in the iPhone app. You set the time you will be back at the ramp. If you have not ended the Watch by then, FaiSH sends you a notification and a text, then texts the people you named. It does not contact marine rescue or the police. Because it has to work when your phone is flat or out of signal, it runs on FaiSH's server, not on your phone.</p>
+
+        <h3>What it keeps</h3>
+        <ul>
+          <li><strong>Your mobile number.</strong> You sign in with it, by a code we text to it, and your own Watch warnings go to it.</li>
+          <li><strong>The people you name.</strong> For each: the name and mobile number you type in (FaiSH does not read your phone's contacts), whether they are your shore contact or an emergency contact, when they were told they had been named, and whether they asked not to be texted.</li>
+          <li><strong>Each Watch you start.</strong> The ramp, where you are heading if you say, your time back, how many people are on board, your name as you give it, and your boat's name, make, length, hull colour and registration as entered in the app, so the people you named can describe the boat to rescuers.</li>
+          <li><strong>Your phone's notification address</strong>, which lets the server send your phone a notification through Apple.</li>
+          <li><strong>A record of each message sent</strong>: when it was sent, which of your contacts it was for, and whether it was delivered. Not its words and not the number. The words are kept only until the message has gone.</li>
+        </ul>
+        <p><strong>Your position.</strong> The Watch does not send your position today. If that changes, this page will say so first, and the app will ask.</p>
+
+        <h3>What the people you name receive</h3>
+        <p>When you add someone and choose to tell them, FaiSH texts them once to say you named them, with a link to stop the texts. Nobody is texted about a Watch unless they have had that first text and have not stopped them. If you are overdue, they get a text with a link to a page showing your trip and boat details above, your mobile number, how long you are overdue and what to do. That page stops showing any of it once you end the Watch. Anyone named can reply STOP to any FaiSH text, or use the link in the first text, and FaiSH stops texting them at once.</p>
+
+        <h3>Where it is kept, and for how long</h3>
+        <p>On FaiSH's Watch server and its database, on Microsoft Azure in Australia (Australia East). The database is on a private network and cannot be reached from the internet. Sign-in codes and session tokens are stored only in a form that cannot be turned back into the code or token.</p>
+        <ul>
+          <li>Sign-in codes are deleted after a day. Signing in on a phone lasts until you sign out, or for 90 days without use.</li>
+          <li>Your contacts and Watches are kept until you remove them or delete your Watch account.</li>
+          <li><strong>Deleting your Watch account</strong>, from the Watch tab in the app, deletes your number, your contacts, your Watches and your phone's notification address at once. Only the record of messages sent is kept, which holds no number, name or words, so that whether a warning went out can still be answered.</li>
+        </ul>
 
         <h2>Who else is involved</h2>
         <ul>
@@ -68,26 +93,25 @@
           <li><strong>Open-Meteo</strong> provides weather and wave forecasts.</li>
           <li><strong>Anthropic</strong> provides the model that writes the reading.</li>
           <li><strong>Microsoft 365</strong> holds FaiSH's email.</li>
+          <li><strong>Mobile Message</strong>, an Australian SMS provider, sends the Watch's texts and passes on replies such as STOP.</li>
+          <li><strong>Expo</strong> and <strong>Apple</strong> deliver the Watch's notifications to your phone.</li>
         </ul>
         <p>Some of these handle requests outside Australia, including in the United States and Europe.</p>
 
         <h2>What FaiSH does not do</h2>
         <ul>
-          <li>No accounts or sign-in.</li>
+          <li>No accounts or sign-in, except the Watch's sign-in by mobile number.</li>
           <li>No advertising, and no advertising or tracking code.</li>
           <li>No analytics or crash-reporting code.</li>
           <li>No access to your contacts, photos, camera or microphone.</li>
           <li>No sale or sharing of information about you.</li>
         </ul>
 
-        <h2>Coming with the Watch</h2>
-        <p>FaiSH plans a safety timer, the Watch, that sends a text message to people you nominate if you are overdue back. To work, it will need your mobile number, the names and numbers of the people you nominate, and your position while a Watch is running. None of this is collected today. This page will be updated, and the app will tell you, before the Watch is offered.</p>
-
         <h2>Children</h2>
         <p>FaiSH is made for the people who run boats. It is not directed at children.</p>
 
         <h2>Questions and complaints</h2>
-        <p>Email <a href="mailto:privacy@faish.app">privacy@faish.app</a> to ask what FaiSH holds about you, to correct or delete anything, or to complain. If you are not satisfied with the answer, you can contact the Office of the Australian Information Commissioner at <a href="https://www.oaic.gov.au/">oaic.gov.au</a>.</p>
+        <p>Email <a href="mailto:privacy@faish.app">privacy@faish.app</a> to ask what FaiSH holds about you, to correct or delete anything, or to complain. That includes anyone a skipper has named as a Watch contact. If you are not satisfied with the answer, you can contact the Office of the Australian Information Commissioner at <a href="https://www.oaic.gov.au/">oaic.gov.au</a>.</p>
 
         <h2>Changes</h2>
         <p>When this page changes, the date at the top changes. A change to what FaiSH collects will be shown in the app before it takes effect.</p>
