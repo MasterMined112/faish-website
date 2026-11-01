@@ -23,7 +23,7 @@
 
     <main class="doc">
       <h1>Privacy</h1>
-      <p class="updated">Last updated 1 November 2026.</p>
+      <p class="updated">Last updated 2 November 2026.</p>
       <div class="scale" aria-hidden="true"></div>
       <div class="prose">
         <p>FaiSH is made by MasterMined Innovation Pty Ltd (ABN 98 673 501 436), called &ldquo;we&rdquo; on this page. This page says what information FaiSH handles, where it goes, and what we do with it. It covers the FaiSH web app at faish.expo.app, this website, and the FaiSH iPhone app, which is in testing.</p>
@@ -45,7 +45,7 @@
           <li>the version of the terms you accepted, and when;</li>
           <li>copies of the forecasts, warnings and tides last downloaded, so the app works without a signal.</li>
         </ul>
-        <p>Your marks, the pins you drop on the map in the iPhone app with their names and notes, are kept more carefully again: in the phone's encrypted Keychain, on that phone only, with no backup. They are never sent anywhere. Planning a trip to one asks for the forecast for the grid squares along the way, about 13 km across, as any trip does.</p>
+        <p>Your marks, the pins you drop on the map in the iPhone app with their names and notes, are kept more carefully again: in the phone's encrypted Keychain, on that phone only, with no backup. Their positions, names and notes are never sent anywhere. Planning a trip to one asks for the forecast for the grid squares along the way, about 13 km across, as any trip does, and its written reading is sent only the results described below.</p>
         <p>To delete all of it, clear FaiSH's data in your browser's settings, or delete the app. Nothing else needs deleting, because none of it is held anywhere else. On an iPhone the Keychain can outlast the app, so delete your marks in the app first (Setup, Your marks, Delete every mark).</p>
 
         <h2>Your location</h2>
@@ -57,7 +57,7 @@
           <li><strong>Forecast files.</strong> The app downloads a forecast file for your region from FaiSH's forecast server (Microsoft Azure, in Australia). The file is the same for everyone in the region, so asking for it does not say which ramp you use.</li>
           <li><strong>Forecasts the file does not cover.</strong> If the water you are planning for is not in the region's file, or the file cannot be downloaded, the app asks FaiSH's server for the forecast at that point on a grid about 13 km across, and the server asks Open-Meteo, the forecast provider. Only the grid square is sent. The server keeps no record of it, and holds the forecast for half an hour for anyone else asking about the same square. Open-Meteo sees FaiSH's server, not you.</li>
           <li><strong>Warnings and tides.</strong> The app downloads the Bureau of Meteorology's marine warnings, and the tide predictions for your region, from FaiSH's app server. These are also the same for everyone in a region.</li>
-          <li><strong>The written reading of the day.</strong> To write its plain-language reading, the app sends FaiSH's app server the day's forecast figures, the date, the region, the kind of trip, and which fish list applies. It sends no location, no name and nothing you have typed. The server passes those figures to Anthropic's Claude model, which writes the reading.</li>
+          <li><strong>The written reading of the day.</strong> To write its plain-language reading, the app sends FaiSH's app server the day's forecast figures, the date, the region, the kind of trip, and which fish list applies. If you have set where you are heading, it also sends how the wind sits against your run out and home, how far from the ramp the roughest water is, and, for a public place such as an island or a reef, which place. For a trip to one of your marks it sends those results only, and the reading calls it &ldquo;your mark&rdquo;. A name you gave the mark is added on your phone. The app sends no position, no ramp, no name of yours and nothing you have typed. The server passes all of this to Anthropic's Claude model, which writes the reading.</li>
           <li><strong>Feedback.</strong> A feedback link in the app opens your own email program with a message to feedback@faish.app. The message includes the ramp's name and the app's version, and you see it before you send it. We keep feedback to read it and act on it, and delete it on request.</li>
           <li><strong>The Watch</strong>, if you use it: see <a href="#watch">the Watch</a>.</li>
         </ul>
