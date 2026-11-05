@@ -53,14 +53,14 @@ a:focus-visible, .button:focus-visible { outline: 2px solid var(--cyan); outline
   display: flex; align-items: center; justify-content: space-between; gap: 16px;
   padding: 22px 0 18px; border-bottom: 1px solid var(--rule-soft);
 }
-.top nav { display: flex; gap: 20px; font-size: 15px; font-weight: 600; }
+.top nav { display: flex; flex-wrap: wrap; justify-content: flex-end; column-gap: 16px; row-gap: 6px; font-size: 15px; font-weight: 600; }
 .top nav a { color: var(--dim); text-decoration: none; }
 .top nav a:hover, .top nav a[aria-current="page"] { color: var(--buff); }
 
 /* The lockup, exact: cyan "ai" over a flat magenta rule .06em below the baseline. */
 .wm {
   font-family: 'Archivo Black', var(--body); font-weight: 900; font-size: 30px; line-height: 1;
-  letter-spacing: -.035em; color: var(--buff); text-decoration: none;
+  letter-spacing: -.035em; color: var(--buff); text-decoration: none; white-space: nowrap; flex: none;
 }
 .wm .ai {
   color: #2BE3CE; display: inline-block; padding-bottom: .08em;
@@ -118,10 +118,18 @@ section:last-of-type { border-bottom: none; }
   border-left: 3px solid var(--caution); padding: 4px 0 4px 16px; color: var(--buff);
 }
 
+/* ---------- about ---------- */
+.shots { display: grid; gap: 22px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.shots figure { margin: 0; display: flex; flex-direction: column; gap: 10px; }
+.shots img { width: 100%; height: auto; display: block; border-radius: 10px; }
+.shots figcaption, .note { color: var(--dim); font-size: 15px; }
+.note { margin-top: 16px; }
+
 /* ---------- documents ---------- */
 .doc { padding: 40px 0 8px; }
 .updated { color: var(--faint); font-size: 15px; margin-top: 10px; }
 .doc h2 { margin-top: 36px; }
+.doc h1 + .prose { margin-top: 16px; }
 
 /* ---------- footer ---------- */
 footer {

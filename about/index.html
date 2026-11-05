@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About · FaiSH</title>
+  <meta name="description" content="What FaiSH does and where its data comes from: forecast, Bureau warnings, tides, fish, ramps and the map, all in one place for your boat.">
+  <meta name="theme-color" content="#0A0614">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="stylesheet" href="../site.css?v=2">
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <a class="wm" href="../" aria-label="FaiSH, home">F<span class="ai">ai</span>SH</a>
+      <nav aria-label="Site">
+        <a href="./" aria-current="page">About</a>
+        <a href="../support/">Support</a>
+        <a href="../privacy/">Privacy</a>
+        <a href="../terms/">Terms</a>
+      </nav>
+    </header>
+
+    <main class="doc">
+      <h1>All of it in one place</h1>
+      <div class="prose">
+        <p>Most boaties have a phone full of apps for fish, tides, bite times, wind and weather, and it is up to them to work out how they fit together for their boat. FaiSH puts all of that in one place. Seeing it all more easily lets the skipper make safer decisions, for a more enjoyable boating experience. That is FaiSH's mission.</p>
+        <p>FaiSH for iPhone is in beta testing, so do not rely solely on it.</p>
+      </div>
+
+      <section aria-labelledby="map">
+        <h2 id="map">The map</h2>
+        <div class="scale" aria-hidden="true"></div>
+        <div class="shots">
+          <figure>
+            <img src="sea-map-wide.jpg" width="640" height="1132" loading="lazy" alt="Satellite picture of Moreton Bay covered in squares, each showing wind and gusts in knots for 04:00, with bars below for each hour of the day.">
+            <figcaption>Wind and gusts on the water around the ramp, for any hour. Cyan is inside the boat's limits, orange is rougher, and red is past them.</figcaption>
+          </figure>
+          <figure>
+            <img src="sea-map-close.jpg" width="640" height="1132" loading="lazy" alt="A closer satellite picture of the same bay, with the squares and their wind and gust figures larger.">
+            <figcaption>Closer in, on the same hour. The bars below move through the day.</figcaption>
+          </figure>
+        </div>
+        <p class="note">Screens from FaiSH for iPhone, on an earlier forecast for Moreton Bay. They are examples, not a forecast.</p>
+      </section>
+
+      <section aria-labelledby="does">
+        <h2 id="does">What it does</h2>
+        <div class="scale" aria-hidden="true"></div>
+        <ul class="facts">
+          <li><strong>Your boat, your kind of trip</strong>Set the wind and sea your boat can take, and each hour is graded against them. The limits tighten for the trip: fishing, a family day, an island camp, a dive, skiing.</li>
+          <li><strong>Tomorrow and the days ahead</strong>A grade for the day, the best time to go, and the time to be off the water when there is one. Window sets out the days ahead, and Hour by hour opens any of them in full.</li>
+          <li><strong>The journey as well as the ramp</strong>Choose a place or drop a pin, and the forecast follows the route, with where the roughest water sits along it.</li>
+          <li><strong>The map</strong>Wind and gusts square by square, on a satellite picture or a map, for any hour.</li>
+          <li><strong>Bureau marine wind warnings</strong>In the Bureau's own words. A warning closes the hours it covers.</li>
+          <li><strong>Tides</strong>High and low water from a Bureau tide station within 15 km of the ramp, with the ramp register's own tide warnings beside them.</li>
+          <li><strong>Fish and bite windows</strong>Bite windows from the sun and moon. What is worth chasing on your water, with the closed seasons and the places the rules change. The fish lists are in beta too, and no local has read them yet.</li>
+          <li><strong>Australian boat ramps</strong>More than <span class="figure">2,000</span> of them, found by name, town or state.</li>
+          <li><strong>Your own marks</strong>Drop a pin, move it and name it. Marks stay on your phone, and FaiSH never receives where they are.</li>
+          <li><strong>A written reading of the day</strong>Written by AI from the day's figures, and marked as AI. The grade itself comes from fixed rules, the same way every time.</li>
+          <li><strong>The Watch</strong>An optional timer for getting home. Set your time back at the ramp. If you have not ended it by then, FaiSH texts you, then the people you named. It does not contact marine rescue, so keep logging on with them.</li>
+          <li><strong>With no signal</strong>The last forecast and a fortnight of tides stay on the phone.</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="data">
+        <h2 id="data">Where the data comes from</h2>
+        <div class="scale" aria-hidden="true"></div>
+        <ul class="facts">
+          <li><strong>Wind, gusts and weather</strong>Open-Meteo, based on Germany's weather service (DWD), at points about 13 km apart. The UK Met Office's model is the second opinion.</li>
+          <li><strong>Waves and swell</strong>Open-Meteo's wave models.</li>
+          <li><strong>Marine wind warnings and tide predictions</strong>The Bureau of Meteorology. The Bureau is the official forecaster, and the forecast FaiSH reads is not the Bureau's.</li>
+          <li><strong>Sun and moon</strong>Worked out on your phone.</li>
+          <li><strong>Boat ramps</strong>State and territory government lists, credited in the app.</li>
+          <li><strong>Place names</strong>The Composite Gazetteer of Australia.</li>
+          <li><strong>Fish, seasons and closures</strong>Fisheries agencies, state law and research surveys, then fishing columns where there is nothing better. Each list says what it rests on.</li>
+          <li><strong>The map and satellite picture</strong>Apple Maps.</li>
+          <li><strong>The written reading</strong>A model from Anthropic, given the day's figures and no account of who you are.</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="not">
+        <h2 id="not">What it is not</h2>
+        <div class="scale" aria-hidden="true"></div>
+        <div class="prose">
+          <p>FaiSH is a planning aid. It is not the official forecast, it does not contact rescue services, and it is not a chart. The decision to go, and when to come home, stays with the skipper. The <a href="../terms/">terms</a> say what the grade leaves out.</p>
+          <p class="emergency">In an emergency, call <strong>000</strong> or use VHF channel <strong>16</strong>.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <nav aria-label="Footer">
+        <a href="../">Home</a>
+        <a href="../support/">Support</a>
+        <a href="../privacy/">Privacy</a>
+        <a href="../terms/">Terms</a>
+        <a href="mailto:hello@faish.app">hello@faish.app</a>
+      </nav>
+      <p>&copy; 2026 MasterMined Innovation Pty Ltd, ABN 98 673 501 436. FaiSH is a trade mark of MasterMined Innovation Pty Ltd. iPhone is a trademark of Apple Inc., registered in the U.S. and other countries and regions.</p>
+    </footer>
+  </div>
+</body>
+</html>
