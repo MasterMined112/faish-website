@@ -120,10 +120,21 @@ section:last-of-type { border-bottom: none; }
 
 /* ---------- about ---------- */
 .shots { display: grid; gap: 22px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
-.shots figure { margin: 0; display: flex; flex-direction: column; gap: 10px; }
+.shots figure { margin: 0; display: flex; flex-direction: column; gap: 10px; position: relative; }
 .shots img { width: 100%; height: auto; display: block; border-radius: 10px; }
 .shots figcaption, .note { color: var(--dim); font-size: 15px; }
 .note { margin-top: 16px; }
+/* The pictures carry real looking figures for another day, so each says so on itself. */
+.example-note {
+  border-left: 3px solid var(--caution); padding: 4px 0 4px 16px; margin: 0 0 20px;
+  color: var(--buff); font-weight: 600; max-width: 65ch;
+}
+.example-tag {
+  position: absolute; top: 10px; left: 10px; z-index: 1;
+  padding: 5px 10px; border-radius: 6px; border: 1px solid var(--caution);
+  background: rgba(10, 6, 20, .88); color: var(--buff);
+  font-size: 14px; font-weight: 700; line-height: 1.2;
+}
 
 /* ---------- documents ---------- */
 .doc { padding: 40px 0 8px; }
