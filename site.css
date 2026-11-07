@@ -120,20 +120,25 @@ section:last-of-type { border-bottom: none; }
 
 /* ---------- about ---------- */
 .shots { display: grid; gap: 22px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
-.shots figure { margin: 0; display: flex; flex-direction: column; gap: 10px; position: relative; }
+.shots figure { margin: 0; display: flex; flex-direction: column; gap: 10px; }
 .shots img { width: 100%; height: auto; display: block; border-radius: 10px; }
 .shots figcaption, .note { color: var(--dim); font-size: 15px; }
 .note { margin-top: 16px; }
-/* The pictures carry real looking figures for another day, so each says so on itself. */
+/*
+ * The pictures carry real looking figures for another day, so each says so on itself. The label is a bar
+ * ABOVE the picture and never laid over it: every picture has Apple's "Not for navigation" in its top
+ * corner, and the first version covered it.
+ */
 .example-note {
   border-left: 3px solid var(--caution); padding: 4px 0 4px 16px; margin: 0 0 20px;
   color: var(--buff); font-weight: 600; max-width: 65ch;
 }
+.example-frame { border: 2px solid var(--caution); border-radius: 12px; overflow: hidden; }
+.example-frame img { border-radius: 0; }
 .example-tag {
-  position: absolute; top: 10px; left: 10px; z-index: 1;
-  padding: 5px 10px; border-radius: 6px; border: 1px solid var(--caution);
-  background: rgba(10, 6, 20, .88); color: var(--buff);
-  font-size: 14px; font-weight: 700; line-height: 1.2;
+  margin: 0; padding: 6px 12px;
+  background: var(--caution); color: var(--abyss);
+  font-size: 14px; font-weight: 700; line-height: 1.3;
 }
 
 /* ---------- documents ---------- */
